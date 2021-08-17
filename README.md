@@ -1,2 +1,5 @@
 # byte-vitepress-cli
-It's a light CLI for VitePress
+
+## Under construction！
+
+This is a lightweight CLI for VitePress，and supports bilingual template selection.
