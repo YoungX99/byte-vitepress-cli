@@ -1,20 +1,17 @@
 #!/usr/bin/env node
 
 const updateChk = require('../lib/update')
-const dlTemplate = require('../lib/download')
 const setMirror = require('../lib/mirror')
 const initProject = require('../lib/init')
-
 const program = require('commander')
-const chalk = require('chalk')
-const symbols = require('log-symbols')
+
 
 // version
 program
   .version(require('../package.json').version, '-v, --version')
 
 	
-// init
+// init a project 
 program
 	.name('vitepress-cli')
 	.usage('<commands> [options]')
@@ -25,7 +22,7 @@ program
 		initProject(project,cmd)
 	})
 
-// upgrade
+// upgrade the cli
 program
 	.command('upgrade')
 	.description("Check the VitePress-CLI version.")
@@ -33,23 +30,13 @@ program
 		updateChk()
 	})
 
-// template
-program
-	.command('template')
-	.description("Download template from mirror.")
-	.action(() => {
-		dlTemplate()
-	})
-
-// mirror
+// reset the mirror
 program
 	.command('mirror <template_mirror>')
 	.description("Set the template mirror.")
 	.action((tplMirror) => {
 		setMirror(tplMirror)
 	})
-
-
 
 program.on('--help', function() {
 	console.log('')
@@ -59,9 +46,5 @@ program.on('--help', function() {
 	console.log('')
 })
 
-
-
 program.parse(process.argv)
-if(program.en){
-	console.log('dib');
-}
+

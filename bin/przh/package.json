@@ -1,0 +1,17 @@
+{
+  "name": "byte-vitepress-cli",
+  "version": "1.0.0",
+  "description": "A lightweight CLI for VitePress project, and supports bilingual template selection.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "keywords": [],
+  "author": "YoungX99",
+  "license": "MIT",
+  "dependencies": {
+    "vitepress": "^0.13.2"
+  }
+}
