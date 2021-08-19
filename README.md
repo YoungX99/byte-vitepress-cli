@@ -19,19 +19,19 @@ $ byte-vitepress-cli init myproject -e
 ```
 
 # Parameter
-## init <PROJECT_NAME> [LANGUAGE_OPTIONS]
+### init <PROJECT_NAME> [LANGUAGE_OPTIONS]
 Create the VitePress project:
 ```
 $ byte-vitepress-cli init myproject or byte-vitepress-cli init myproject -e
 ```
 
-## upgrade
+### upgrade
 Check the new version is available or not:
 ```
 $ byte-vitepress-cli upgrade
 ```
 
-## mirror <TEMPLATE_MIRROR>
+### mirror <TEMPLATE_MIRROR>
 You can also set the template mirror like this:
 ```
 $ byte-vitepress-cli mirror https://moonstarimg.oss-cn-hangzhou.aliyuncs.com/template/
