@@ -2,7 +2,7 @@
 
 `Due to some unknown error, please use limited version vitepress template temporarily.`
 
-This is a lightweight CLI for VitePress，and supports bilingual template selection.
+This is a lightweight CLI for VitePress，you can select the language template you want with the parameters.What is distinctive is that supports bytedance's InspireCloud page deployment.
 
 # Installation
 ```
@@ -22,13 +22,34 @@ $ byte-vitepress-cli init myproject -e
 ### init <PROJECT_NAME> [LANGUAGE_OPTIONS]
 Create the VitePress project:
 ```
-$ byte-vitepress-cli init myproject or byte-vitepress-cli init myproject -e
+$ byte-vitepress-cli init myproject 
+or 
+$ byte-vitepress-cli init myproject -e
 ```
 
 ### upgrade
 Check the new version is available or not:
 ```
 $ byte-vitepress-cli upgrade
+```
+
+### service <service_ID> \<credentials>
+You can use this command to record your InspireCloud service configuration.
+
+The service_ID can be viewed in your cloud service configuration item.
+
+For the configuration of credentials, you can see the following url: [personal_ credentials](https://qingfuwu.cn/docs/openapi/personaltoken2.html)
+```
+$ byte-vitepress-cli service aaabbb abcdefxyz
+```
+### deploy
+Deploy your project to InspireCloud.
+
+Before deploying, make sure you use the Service Command to set up your service information.
+
+In addition, you must run the `npm run build` command to build your project.
+```
+$ byte-vitepress-cli deploy
 ```
 
 ### mirror <TEMPLATE_MIRROR>
