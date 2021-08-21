@@ -1,8 +1,14 @@
+<p align="center"><img src="https://s2.ax1x.com/2020/02/04/1DsmTO.png" height = "100" /></p>
+<h2 align="center">Byte-VitePress-CLI</h2>
+<p align="center">  
+English | <a href="./README_ZH.md">简体中文</a>
+</p>
+
 # Introduction
 
-`Due to some unknown error, please use limited version vitepress template temporarily.`
+`Due to some unknown error, please use limited version vitepress@0.13.2 template temporarily.`
 
-This is a lightweight CLI for VitePress，you can select the language template you want with the parameters.What is distinctive is that supports bytedance's InspireCloud page deployment.
+This is a lightweight CLI for VitePress，you can select the language template you want with the parameters. What is distinctive is that supports ByteDance's InspireCloud page deployment.
 
 # Installation
 ```
