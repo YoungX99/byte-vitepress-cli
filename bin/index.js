@@ -5,6 +5,8 @@ const setMirror = require("../lib/mirror");
 const setService = require("../lib/service");
 const initProject = require("../lib/init");
 const deployProject = require("../lib/deploy");
+const setMonitor=require("../lib/monitor")
+const monitorProject=require("../lib/addMonitor")
 const program = require("commander");
 
 // version
@@ -19,16 +21,16 @@ program
   .description("Create a VitePress project by language options.")
   .action((project, cmd) => {
     initProject(project, cmd);
-	});
-	
+  });
+
 // deploy the project
 program
   .command("deploy")
   .description("Deploy the page to Cloud Service.")
   .action(() => {
     deployProject();
-	});
-	
+  });
+
 // upgrade the cli
 program
   .command("upgrade")
@@ -50,7 +52,23 @@ program
   .command("service <service_ID> <credentials>")
   .description("Set the serviceInfo.")
   .action((serviceID, credentials) => {
-    setService(serviceID, credentials)
+    setService(serviceID, credentials);
+  });
+
+// set the monitorInfo
+program
+  .command("monitor <APP_ID>")
+  .description("Set the byte-web-monitor app_id.")
+  .action(app_id => {
+    setMonitor(app_id);
+  });
+
+// set the monitor
+program
+  .command("addMonitor")
+  .description("Add monitoring to your page.")
+  .action(() => {
+    monitorProject();
   });
 
 program.on("--help", function () {
