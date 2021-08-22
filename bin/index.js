@@ -4,6 +4,7 @@ const updateChk = require("../lib/update");
 const setMirror = require("../lib/mirror");
 const setService = require("../lib/service");
 const initProject = require("../lib/init");
+const deployProject = require("../lib/deploy");
 const program = require("commander");
 
 // version
@@ -18,8 +19,16 @@ program
   .description("Create a VitePress project by language options.")
   .action((project, cmd) => {
     initProject(project, cmd);
-  });
-
+	});
+	
+// deploy the project
+program
+  .command("deploy")
+  .description("Deploy the page to Cloud Service.")
+  .action(() => {
+    deployProject();
+	});
+	
 // upgrade the cli
 program
   .command("upgrade")
