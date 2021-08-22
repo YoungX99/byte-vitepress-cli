@@ -1,7 +1,7 @@
 {
     "name": "byte-vitepress-cli",
-    "version": "0.0.1",
-    "description": "A lightweight CLI for VitePress project, and supports bilingual template selection",
+    "version": "1.0.0",
+    "description": "A lightweight CLI for VitePress project, What is distinctive is that supports ByteDance's InspireCloud page deployment",
     "main": "./bin/index.js",
     "bin": {
         "byte-vitepress-cli": "./bin/index.js"
@@ -25,9 +25,12 @@
     "homepage": "https://github.com/YoungX99/byte-vitepress-cli",
     "license": "MIT",
     "dependencies": {
+        "adm-zip": "^0.5.5",
+        "axios": "^0.21.1",
         "chalk": "^3.0.0",
         "commander": "^4.1.1",
         "download": "^8.0.0",
+        "form-data": "^4.0.0",
         "fs-extra": "^9.0.1",
         "log-symbols": "^3.0.0",
         "ora": "^5.1.0",
