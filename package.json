@@ -4,7 +4,7 @@
     "description": "A lightweight CLI for VitePress project, What is distinctive is that supports ByteDance's InspireCloud page deployment",
     "main": "./bin/index.js",
     "bin": {
-        "byte-vitepress-cli": "./bin/index.js"
+        "vite-test": "./bin/index.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
