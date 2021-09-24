@@ -5,9 +5,10 @@ const setMirror = require("../lib/mirror");
 const setService = require("../lib/service");
 const initProject = require("../lib/init");
 const deployProject = require("../lib/deploy");
-const setMonitor=require("../lib/monitor")
-const monitorProject=require("../lib/addMonitor")
+const setMonitor = require("../lib/monitor");
+const monitorProject = require("../lib/addMonitor");
 const program = require("commander");
+const autoRouter = require("../lib/autoRouter");
 
 // version
 program.version(require("../package.json").version, "-v, --version");
@@ -69,6 +70,14 @@ program
   .description("Add monitoring to your page.")
   .action(() => {
     monitorProject();
+  });
+
+// refresh the router
+program
+  .command("refresh")
+  .description("refresh your router.")
+  .action(() => {
+    autoRouter();
   });
 
 program.on("--help", function () {
