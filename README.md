@@ -8,7 +8,7 @@ English | <a href="./README_ZH.md">简体中文</a>
 
 `Due to some unknown error, please use limited version vitepress@0.13.2 template temporarily.`
 
-This is a lightweight CLI for VitePress，you can select the language template you want with the parameters. What is distinctive is that supports ByteDance's [InspireCloud](https://qingfuwu.cn/) page deployment, and support for [Byte-Web-Monitor](https://byte-web-monitor.vansin.top/) page monitoring
+This is a lightweight CLI for VitePress，you can select the language template you want with the parameters. What is distinctive is that supports ByteDance's [InspireCloud](https://qingfuwu.cn/) page deployment, and supports for [Byte-Web-Monitor](https://byte-web-monitor.vansin.top/) page monitoring. What's more, it also supports the Chinese template under the convention route generation.
 
 # Installation
 ```
@@ -26,12 +26,41 @@ $ byte-vitepress-cli init myproject -e
 
 # Parameter
 ### init <PROJECT_NAME> [LANGUAGE_OPTIONS]
-Create the VitePress project:
+Create the Chinese VitePress project:
 ```
 $ byte-vitepress-cli init myproject 
-or 
+```
+or in both Chinese and English:
+```
 $ byte-vitepress-cli init myproject -e
 ```
+
+### refresh
+Use this command to automatically generate the sidebar routes for your VitePress project. Currently, only the convention routes under the Chinese template are supported.
+
+Go to your `VitePress` project root directory and type the following command to automatically configure your sidebar article routing information.
+
+```bash
+$ byte-vitepress-cli refresh
+```
+
+The convention route format is as follows:
+
+```
+xxx-{weight}.md
+```
+
+Where `xxx` is the name of the file and the name of the sidebar displayed on the page, `{weight}` is the priority of the article, the smaller the higher the priority.
+
+Here's an example:
+
+- Example file naming:
+  
+<img src = 'https://i.bmp.ovh/imgs/2021/09/37c5924a58451feb.png' style="box-shadow: 1px 2px 10px rgba(0,0,0,0.1);"/>
+
+- Examples of practical effects:
+  
+<img src = 'https://i.bmp.ovh/imgs/2021/09/21c89756fb6fcd74.png' style="box-shadow: 1px 2px 10px rgba(0,0,0,0.1);"/>
 
 ### upgrade
 Check the new version is available or not:

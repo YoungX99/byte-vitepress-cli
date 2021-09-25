@@ -8,7 +8,7 @@
 
 `由于vitepress一些未知的错误，请暂时使用vitepress@0.13.2的模板来编写你的静态页面。`
 
-这是一个轻量级的vitepress脚手架，初始化项目时你可以通过参数选取语言模板，其特色是可以一键部署到字节跳动旗下的云产品————[轻服务](https://qingfuwu.cn/)，以及支持[Byte-Web-Monitor](https://byte-web-monitor.vansin.top/)的页面监控服务。
+这是一个轻量级的vitepress脚手架，初始化项目时你可以通过参数选取语言模板，其特色是可以一键部署到字节跳动旗下的云产品————[轻服务](https://qingfuwu.cn/)、支持[Byte-Web-Monitor](https://byte-web-monitor.vansin.top/)的页面监控服务，以及支持中文模板下的约定路由生成。
 
 # 安装
 ```
@@ -27,12 +27,40 @@ $ byte-vitepress-cli init myproject -e
 # 命令与参数
 
 ### init <PROJECT_NAME> [LANGUAGE_OPTIONS]
-通过该命令初始化你的vitepress项目
+通过该命令初始化你的vitepress中文项目
 ```
 $ byte-vitepress-cli init myproject 
-or 
+```
+或者中英文项目
+```
 $ byte-vitepress-cli init myproject -e
 ```
+### refresh
+通过该命令自动生成你的vitepress项目的侧边栏路由，目前暂时仅支持中文模板下的约定路由生成。
+
+进入你的 `VitePress` 项目根目录，输入如下命令，便可自动配置你的侧边栏文章路由信息。
+
+```bash
+$ byte-vitepress-cli refresh
+```
+
+约定路由格式如下：
+
+```
+xxx-{weight}.md
+```
+
+其中 `xxx` 为文件名，同时也是显示在页面中的侧边栏名，`{weight}` 为文章优先级，越小则越靠前。
+
+示例图如下：
+
+- 文件命名示例
+  
+<img src = 'https://i.bmp.ovh/imgs/2021/09/37c5924a58451feb.png' style="box-shadow: 1px 2px 10px rgba(0,0,0,0.1);"/>
+
+- 实际效果示例
+  
+<img src = 'https://i.bmp.ovh/imgs/2021/09/21c89756fb6fcd74.png' style="box-shadow: 1px 2px 10px rgba(0,0,0,0.1);"/>
 
 ### upgrade
 检查是否有版本更新
